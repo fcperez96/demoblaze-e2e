@@ -34,6 +34,7 @@ ext {
     junit_vintage_engine_version="5.9.3"
     logback_classic_version="1.2.10"
     assertj_core_version="3.23.1"
+    javafaker_version="1.0.2"
 }
 
 dependencies {
@@ -50,6 +51,7 @@ dependencies {
         testImplementation "org.junit.vintage:junit-vintage-engine:${junit_vintage_engine_version}"
         implementation "ch.qos.logback:logback-classic:${logback_classic_version}"
         testImplementation "org.assertj:assertj-core:${assertj_core_version}"
+        implementation "com.github.javafaker:javafaker:${javafaker_version}"
     }
 }
 
