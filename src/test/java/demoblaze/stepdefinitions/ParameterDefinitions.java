@@ -1,10 +1,12 @@
 package demoblaze.stepdefinitions;
 
+import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.ParameterType;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
+import net.serenitybdd.screenplay.ensure.Ensure;
 
 public class ParameterDefinitions {
 
@@ -16,5 +18,11 @@ public class ParameterDefinitions {
     @Before
     public void setTheStage() {
         OnStage.setTheStage(new OnlineCast());
+        Ensure.enableSoftAssertions();
+    }
+
+    @After
+    public void reportSoftAsserts(){
+        Ensure.reportSoftAssertions();
     }
 }
